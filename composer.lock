@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4fad1446daa8d4560112c9c185e8dc59",
+    "content-hash": "13b07f87d791da0fc05dbb4f58f1440a",
     "packages": [
         {
             "name": "jacksonsr45/radiante-php",
@@ -27,6 +27,7 @@
                     "Jacksonsr45\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -38,8 +39,8 @@
             ],
             "description": "This is a simple microframework in PHP",
             "support": {
-                "source": "https://github.com/jacksonsr451/radiante-php/tree/master",
-                "issues": "https://github.com/jacksonsr451/radiante-php/issues"
+                "issues": "https://github.com/jacksonsr451/radiante-php/issues",
+                "source": "https://github.com/jacksonsr451/radiante-php/tree/master"
             },
             "time": "2023-07-18T22:48:20+00:00"
         }
