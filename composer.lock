@@ -4,12 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8107c9cb438432d519a09596d027771c",
-    "packages": [],
+    "content-hash": "4fad1446daa8d4560112c9c185e8dc59",
+    "packages": [
+        {
+            "name": "jacksonsr45/radiante-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jacksonsr451/radiante-php.git",
+                "reference": "f6f760577e8fd07bdf1a58d79a7d96ee56298fa7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jacksonsr451/radiante-php/zipball/f6f760577e8fd07bdf1a58d79a7d96ee56298fa7",
+                "reference": "f6f760577e8fd07bdf1a58d79a7d96ee56298fa7",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jacksonsr45\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "jacksonsr45",
+                    "email": "jackson.severino.rocha@escola.pr.gov.br"
+                }
+            ],
+            "description": "This is a simple microframework in PHP",
+            "support": {
+                "source": "https://github.com/jacksonsr451/radiante-php/tree/master",
+                "issues": "https://github.com/jacksonsr451/radiante-php/issues"
+            },
+            "time": "2023-07-18T22:48:20+00:00"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "jacksonsr45/radiante-php": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

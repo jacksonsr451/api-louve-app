@@ -1,15 +1,18 @@
 {
-    "name": "jacksonsr45/api-louve-app",
-    "autoload": {
-        "psr-4": {
-            "Jacksonsr45\\ApiLouveApp\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "jacksonsr45",
-            "email": "jackson.severino.rocha@escola.pr.gov.br"
-        }
-    ],
-    "require": {}
+  "name": "jacksonsr45/api-louve-app",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "jacksonsr45",
+      "email": "jackson.severino.rocha@escola.pr.gov.br"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "jacksonsr45/radiante-php": "dev-master"
+  }
 }
