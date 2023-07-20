@@ -10,7 +10,7 @@ class Member
     private array $skills;
     private array $availability;
 
-    public function __construct(string $id, string | null $name, array | null $skills, array | null $availability)
+    public function __construct(string $id, string $name, array $skills, array $availability)
     {
         $this->id = $id;
         $this->name = $name;
