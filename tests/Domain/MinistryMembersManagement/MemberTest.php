@@ -23,7 +23,7 @@ class MemberTest extends TestCase
         $this->assertEquals($availability, $member->getAvailability());
     }
 
-    public function testSettersAndGetters()
+    public function testGetters()
     {
         $id = '1';
         $name = 'João';
@@ -32,19 +32,9 @@ class MemberTest extends TestCase
 
         $member = new Member($id, $name, $skills, $availability);
 
-        $newId = '2';
-        $newName = 'Maria';
-        $newSkills = ['Bass'];
-        $newAvailability = ['Saturday'];
-
-        $member->setId($newId);
-        $member->setName($newName);
-        $member->setSkills($newSkills);
-        $member->setAvailability($newAvailability);
-
-        $this->assertEquals($newId, $member->getId());
-        $this->assertEquals($newName, $member->getName());
-        $this->assertEquals($newSkills, $member->getSkills());
-        $this->assertEquals($newAvailability, $member->getAvailability());
+        $this->assertEquals($id, $member->getId());
+        $this->assertEquals($name, $member->getName());
+        $this->assertEquals($skills, $member->getSkills());
+        $this->assertEquals($availability, $member->getAvailability());
     }
 }

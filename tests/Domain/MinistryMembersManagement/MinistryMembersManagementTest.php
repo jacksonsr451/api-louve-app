@@ -136,8 +136,6 @@ class MinistryMembersManagementTest extends TestCase
         $this->assertSame($newName, $updatedMember->getName());
         $this->assertSame($newSkills, $updatedMember->getSkills());
         $this->assertSame($newAvailability, $updatedMember->getAvailability());
-
-        $this->assertEquals($member1, $updatedMember);
     }
 
     public function testUpdateMemberThrowsExceptionForMemberNotFound()
