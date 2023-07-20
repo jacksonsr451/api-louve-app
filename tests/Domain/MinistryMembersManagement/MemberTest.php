@@ -17,16 +17,14 @@ class MemberTest extends TestCase
         $member = new Member($id, $name, $skills, $availability);
 
         $this->assertInstanceOf(Member::class, $member);
-        $this->assertEquals($id, $member->id);
-        $this->assertEquals($name, $member->name);
-        $this->assertEquals($skills, $member->skills);
-        $this->assertEquals($availability, $member->availability);
+        $this->assertEquals($id, $member->getId());
+        $this->assertEquals($name, $member->getName());
+        $this->assertEquals($skills, $member->getSkills());
+        $this->assertEquals($availability, $member->getAvailability());
     }
 
-    public function testMemberIsReadonly()
+    public function testSettersAndGetters()
     {
-        $this->expectException(\Error::class);
-
         $id = '1';
         $name = 'João';
         $skills = ['Guitar', 'Vocal'];
@@ -34,7 +32,19 @@ class MemberTest extends TestCase
 
         $member = new Member($id, $name, $skills, $availability);
 
-        $member->skills[] = 'Bass';
-        $member->availability[] = 'Saturday';
+        $newId = '2';
+        $newName = 'Maria';
+        $newSkills = ['Bass'];
+        $newAvailability = ['Saturday'];
+
+        $member->setId($newId);
+        $member->setName($newName);
+        $member->setSkills($newSkills);
+        $member->setAvailability($newAvailability);
+
+        $this->assertEquals($newId, $member->getId());
+        $this->assertEquals($newName, $member->getName());
+        $this->assertEquals($newSkills, $member->getSkills());
+        $this->assertEquals($newAvailability, $member->getAvailability());
     }
 }
