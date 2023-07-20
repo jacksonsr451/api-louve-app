@@ -55,12 +55,12 @@ class MinistryMembersManagement
         Weekday::validate($availability);
         Skills::validate($skills);
 
-        foreach ($this->members as $member) {
+        foreach ($this->members as $index => $member) {
             if ($member->getId() === $id) {
-                $member->setName($name);
-                $member->setSkills($skills);
-                $member->setAvailability($availability);
-                return $member;
+                unset($this->members[$index]);
+                $updated = new Member($id, $name, $skills, $availability);
+                $this->members[] = $updated;
+                return $updated;
             }
         }
 

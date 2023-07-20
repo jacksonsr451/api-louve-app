@@ -37,24 +37,4 @@ class Member
     {
         return $this->availability;
     }
-
-    public function setId(string $id): void
-    {
-        $this->id = $id;
-    }
-
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
-
-    public function setSkills(array $skills): void
-    {
-        $this->skills = $skills;
-    }
-
-    public function setAvailability(array $availability): void
-    {
-        $this->availability = $availability;
-    }
 }
