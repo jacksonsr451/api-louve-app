@@ -34,8 +34,6 @@ class MemberTest extends TestCase
 
         $member = new Member($id, $name, $skills, $availability);
 
-        $member->id = '2';
-        $member->name = 'Maria';
         $member->skills[] = 'Bass';
         $member->availability[] = 'Saturday';
     }
