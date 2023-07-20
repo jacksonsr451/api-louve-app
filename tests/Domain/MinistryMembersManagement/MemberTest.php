@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Tests\Domain\MinistryMembersManagement;
 
 use App\Domain\MinistryMembersManagement\Member;
 use PHPUnit\Framework\TestCase;
