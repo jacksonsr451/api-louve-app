@@ -18,7 +18,8 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "jacksonsr45/radiante-php": "dev-master"
+    "jacksonsr45/radiante-php": "dev-master",
+    "vlucas/phpdotenv": "5.5.x-dev"
   },
   "require-dev": {
     "phpunit/phpunit": "10.3.x-dev"
