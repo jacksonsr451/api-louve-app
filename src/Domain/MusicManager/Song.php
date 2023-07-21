@@ -5,13 +5,15 @@ namespace App\Domain\MusicManager;
 class Song
 {
     private string $title;
+    private string $ministerID;
     private string $link;
     private string $lyrics;
     private string $chords;
 
-    public function __construct(string $title, string $link, string $lyrics, string $chords)
+    public function __construct(string $title, string $ministerID, string $link, string $lyrics, string $chords)
     {
         $this->title = $title;
+        $this->ministerID = $ministerID;
         $this->link = $link;
         $this->lyrics = $lyrics;
         $this->chords = $chords;
@@ -20,6 +22,11 @@ class Song
     public function getTitle(): string
     {
         return $this->title;
+    }
+
+    public function getMinisterID(): string
+    {
+        return $this->ministerID;
     }
 
     public function getLink(): string
