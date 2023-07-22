@@ -10,7 +10,6 @@ interface MinistryMembersServiceInterface
     public function updateMember(MemberDTO $member): void;
     public function removeMember(MemberDTO $member): void;
     public function getAll(): array;
-    public function getById(MemberDTO $member): MemberDTO;
     public function getByName(MemberDTO $member): MemberDTO;
     public function getBySkills(MemberDTO $member): array;
     public function getByAvailability(MemberDTO $member): array;
