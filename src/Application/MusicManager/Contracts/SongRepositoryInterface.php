@@ -4,7 +4,7 @@ namespace App\Application\MusicManager;
 
 use App\Domain\MusicManager\Song;
 
-interface SongInterface
+interface SongRepositoryInterface
 {
     public function create(Song $song): void;
     public function delete(Song $song): void;
