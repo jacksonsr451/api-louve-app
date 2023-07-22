@@ -18,10 +18,10 @@ class MemberDTO
         $this->id = $id !== null ? filter_var($id, FILTER_SANITIZE_FULL_SPECIAL_CHARS) : '';
         $this->name = $name !== null ? filter_var($name, FILTER_SANITIZE_FULL_SPECIAL_CHARS) : '';
         $this->skills = array_map(function ($skill) {
-            return filter_var($skill, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            return ucfirst(filter_var($skill, FILTER_SANITIZE_FULL_SPECIAL_CHARS));
         }, $skills);
         $this->availability = array_map(function ($day) {
-            return filter_var($day, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            return ucfirst(filter_var($day, FILTER_SANITIZE_FULL_SPECIAL_CHARS));
         }, $availability);
     }
 }
