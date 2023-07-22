@@ -76,8 +76,7 @@ class ScheduleManagerTest extends TestCase
 
         $schedulesByMember = $this->scheduleManager->getSchedulesByMember('member-1');
 
-        $this->assertCount(1, $schedulesByMember);
-        $this->assertEquals($eventId1, $schedulesByMember[0]->getEventId());
+        $this->assertEquals($eventId1, $schedulesByMember->getEventId());
     }
 
     public function testMemberAlreadyScheduled()
