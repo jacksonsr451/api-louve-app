@@ -11,6 +11,7 @@ class Skills
     const DRUMS = 'Drums';
     const BASS = 'Bass';
     const KEYBOARD = 'Keyboard';
+    const PIANO = 'Piano';
 
     public static function validate(array $skills): void
     {
@@ -20,7 +21,8 @@ class Skills
                 Skills::VOCAL,
                 Skills::DRUMS,
                 Skills::BASS,
-                Skills::KEYBOARD
+                Skills::KEYBOARD,
+                Skills::PIANO
             ])) {
                 throw new InvalidSkill();
             }
