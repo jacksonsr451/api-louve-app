@@ -66,24 +66,24 @@ class ScheduleManager
         return $this->schedules;
     }
 
-    public function getSchedulesByEvent(string $eventId): array
+    public function getSchedulesByEvent(string $eventId): Schedule
     {
-        $schedules = [];
         foreach ($this->schedules as $schedule) {
             if ($schedule->getEventId() === $eventId) {
-                $schedules[] = $schedule;
-            }
-        }
-        return $schedules;
-    }
-
-    public function getSchedulesByMember(string $memberID): Schedule
-    {
-        foreach ($this->schedules as $schedule) {
-            if (in_array($memberID, $schedule->getMembers())) {
                 return $schedule;
             }
         }
+    }
+
+    public function getSchedulesByMember(string $memberID): array
+    {
+        $schedules = [];
+        foreach ($this->schedules as $schedule) {
+            if (in_array($memberID, $schedule->getMembers())) {
+                $schedules[] =  $schedule;
+            }
+        }
+        return $schedules;
     }
 
     private function isMemberScheduled(string $eventId, string $memberID): bool
