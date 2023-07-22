@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Application\MusicManager;
+namespace App\Application\MusicManager\DTOs;
 
 class SongDTO
 {

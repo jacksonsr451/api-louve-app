@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Application\MusicManager;
+namespace App\Application\MusicManager\Contracts;
+
+use App\Application\MusicManager\DTOs\SongDTO;
 
 interface MusicManagerServiceInterface
 {
