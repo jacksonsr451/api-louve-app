@@ -43,9 +43,8 @@ class ScheduleManagerTest extends TestCase
 
         $this->scheduleManager->updateSchedule($eventId, $membersID);
         $schedule = $this->scheduleManager->getSchedulesByEvent($eventId);
-        $this->assertEquals($membersID, $schedule[0]->getMembers());
-        $this->assertEquals($membersID, $schedule[0]->getMembers());
-        $this->assertCount(1, $schedule);
+        $this->assertEquals($membersID, $schedule->getMembers());
+        $this->assertEquals($membersID, $schedule->getMembers());
     }
 
     public function testGetSchedules()
@@ -66,8 +65,7 @@ class ScheduleManagerTest extends TestCase
 
         $schedulesByEvent = $this->scheduleManager->getSchedulesByEvent($eventId1);
 
-        $this->assertCount(1, $schedulesByEvent);
-        $this->assertEquals($eventId1, $schedulesByEvent[0]->getEventId());
+        $this->assertEquals($eventId1, $schedulesByEvent->getEventId());
     }
 
     public function testGetSchedulesByMember()
@@ -76,7 +74,8 @@ class ScheduleManagerTest extends TestCase
 
         $schedulesByMember = $this->scheduleManager->getSchedulesByMember('member-1');
 
-        $this->assertEquals($eventId1, $schedulesByMember->getEventId());
+        $this->assertCount(1, $schedulesByMember);
+        $this->assertEquals($eventId1, $schedulesByMember[0]->getEventId());
     }
 
     public function testMemberAlreadyScheduled()
