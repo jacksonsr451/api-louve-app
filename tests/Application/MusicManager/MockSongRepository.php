@@ -3,9 +3,10 @@
 namespace Tests\Application\MusicManager;
 
 use App\Application\MusicManager\Contracts\SongRepositoryInterface;
+use App\Application\Repository;
 use App\Domain\MusicManager\Song;
 
-class MockSongRepository implements SongRepositoryInterface
+class MockSongRepository extends Repository implements SongRepositoryInterface
 {
     private array $songs = [];
 
