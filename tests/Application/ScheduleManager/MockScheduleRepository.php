@@ -2,11 +2,10 @@
 
 namespace Tests\Application\ScheduleManager;
 
-use App\Application\Repository;
 use App\Application\ScheduleManager\Contracts\ScheduleRepositoryInterface;
 use App\Domain\ScheduleManager\Schedule;
 
-class MockScheduleRepository extends Repository implements ScheduleRepositoryInterface
+class MockScheduleRepository implements ScheduleRepositoryInterface
 {
     private array $schedules = [];
 

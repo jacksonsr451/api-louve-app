@@ -3,10 +3,9 @@
 namespace Tests\Application\MinistryMembersManagement;
 
 use App\Application\MinistryMembersManagement\Contracts\MemberRepositoryInterface;
-use App\Application\Repository;
 use App\Domain\MinistryMembersManagement\Member;
 
-class MockMemberRepository extends Repository implements MemberRepositoryInterface
+class MockMemberRepository implements MemberRepositoryInterface
 {
     private $members = [];
 
