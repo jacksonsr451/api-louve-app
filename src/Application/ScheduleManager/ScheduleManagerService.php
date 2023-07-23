@@ -5,10 +5,9 @@ namespace App\Application\ScheduleManager;
 use App\Application\ScheduleManager\Contracts\ScheduleManagerServiceInterface;
 use App\Application\ScheduleManager\Contracts\ScheduleRepositoryInterface;
 use App\Application\ScheduleManager\DTOs\ScheduleDTO;
-use App\Application\Service;
 use App\Domain\ScheduleManager\ScheduleManager;
 
-class ScheduleManagerService extends Service implements ScheduleManagerServiceInterface
+class ScheduleManagerService implements ScheduleManagerServiceInterface
 {
     private ScheduleRepositoryInterface $repository;
 

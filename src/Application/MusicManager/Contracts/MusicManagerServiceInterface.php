@@ -3,8 +3,9 @@
 namespace App\Application\MusicManager\Contracts;
 
 use App\Application\MusicManager\DTOs\SongDTO;
+use App\Application\Service;
 
-interface MusicManagerServiceInterface
+interface MusicManagerServiceInterface extends Service
 {
     public function addMusic(SongDTO $song): void;
     public function deleteMusic(SongDTO $song): void;

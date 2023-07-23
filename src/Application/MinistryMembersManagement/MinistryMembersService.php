@@ -5,10 +5,9 @@ namespace App\Application\MinistryMembersManagement;
 use App\Application\MinistryMembersManagement\Contracts\MemberRepositoryInterface;
 use App\Application\MinistryMembersManagement\Contracts\MinistryMembersServiceInterface;
 use App\Application\MinistryMembersManagement\DTOs\MemberDTO;
-use App\Application\Service;
 use App\Domain\MinistryMembersManagement\MinistryMembersManagement;
 
-class MinistryMembersService extends Service implements MinistryMembersServiceInterface
+class MinistryMembersService implements MinistryMembersServiceInterface
 {
     private MemberRepositoryInterface $repository;
 

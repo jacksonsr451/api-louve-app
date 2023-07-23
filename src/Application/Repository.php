@@ -2,6 +2,6 @@
 
 namespace App\Application;
 
-abstract class Repository
+interface Repository
 {
 }

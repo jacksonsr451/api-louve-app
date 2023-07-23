@@ -5,10 +5,9 @@ namespace App\Application\MusicManager;
 use App\Application\MusicManager\Contracts\MusicManagerServiceInterface;
 use App\Application\MusicManager\Contracts\SongRepositoryInterface;
 use App\Application\MusicManager\DTOs\SongDTO;
-use App\Application\Service;
 use App\Domain\MusicManager\MusicManager;
 
-class MusicManagerService extends Service implements MusicManagerServiceInterface
+class MusicManagerService implements MusicManagerServiceInterface
 {
     private SongRepositoryInterface $repository;
 

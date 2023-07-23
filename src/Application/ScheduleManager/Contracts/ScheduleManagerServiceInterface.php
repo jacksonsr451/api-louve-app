@@ -3,8 +3,9 @@
 namespace App\Application\ScheduleManager\Contracts;
 
 use App\Application\ScheduleManager\DTOs\ScheduleDTO;
+use App\Application\Service;
 
-interface ScheduleManagerServiceInterface
+interface ScheduleManagerServiceInterface extends Service
 {
     public function createSchedule(ScheduleDTO $schedule): void;
     public function updateSchedule(ScheduleDTO $schedule): void;

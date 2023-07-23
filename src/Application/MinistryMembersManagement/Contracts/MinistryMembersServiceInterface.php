@@ -3,8 +3,9 @@
 namespace App\Application\MinistryMembersManagement\Contracts;
 
 use App\Application\MinistryMembersManagement\DTOs\MemberDTO;
+use App\Application\Service;
 
-interface MinistryMembersServiceInterface
+interface MinistryMembersServiceInterface extends Service
 {
     public function registerMember(MemberDTO $member): void;
     public function updateMember(MemberDTO $member): void;
