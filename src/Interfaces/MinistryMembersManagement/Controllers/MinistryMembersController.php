@@ -11,7 +11,7 @@ use Jacksonsr45\RadiantPHP\Http\Response;
 
 class MinistryMembersController extends Controller
 {
-    private MinistryMembersServiceInterface $service;
+    protected MinistryMembersServiceInterface $service;
 
     public function __construct(
         Request $request,
@@ -19,20 +19,23 @@ class MinistryMembersController extends Controller
         MinistryMembersServiceInterface $service
     ) {
         parent::__construct($request, $response, $service);
+        $this->service = $service;
     }
 
-    public function index(): void
+    public function index(): Response
     {
         try {
-            $this->response->setStatusCode(200);
-            $this->response->sendJson(["data" => $this->service->getAll()]);
+            return $this->response
+                ->setStatusCode(200)
+                ->sendJson(["data" => $this->service->getAll()]);
         } catch (Exception $ex) {
-            $this->response->setStatusCode(500);
-            $this->response->sendJson(["error" => $ex->getMessage()]);
+            return $this->response
+                ->setStatusCode(500)
+                ->sendJson(["error" => $ex->getMessage()]);
         }
     }
 
-    public function showByName(): void
+    public function showByName(): Response
     {
         try {
             $request = $this->request->getJson();
@@ -46,13 +49,15 @@ class MinistryMembersController extends Controller
             );
             $this->response->setStatusCode(200);
             $this->response->sendJson(["data" => $data]);
+            return $this->response;
         } catch (Exception $ex) {
             $this->response->setStatusCode(500);
             $this->response->sendJson(["error" => $ex->getMessage()]);
+            return $this->response;
         }
     }
 
-    public function showBySkills(): void
+    public function showBySkills(): Response
     {
         try {
             $request = $this->request->getJson();
@@ -66,13 +71,15 @@ class MinistryMembersController extends Controller
             );
             $this->response->setStatusCode(200);
             $this->response->sendJson(["data" => $data]);
+            return $this->response;
         } catch (Exception $ex) {
             $this->response->setStatusCode(500);
             $this->response->sendJson(["error" => $ex->getMessage()]);
+            return $this->response;
         }
     }
 
-    public function showByAvailability(): void
+    public function showByAvailability(): Response
     {
         try {
             $request = $this->request->getJson();
@@ -86,13 +93,15 @@ class MinistryMembersController extends Controller
             );
             $this->response->setStatusCode(200);
             $this->response->sendJson(["data" => $data]);
+            return $this->response;
         } catch (Exception $ex) {
             $this->response->setStatusCode(500);
             $this->response->sendJson(["error" => $ex->getMessage()]);
+            return $this->response;
         }
     }
 
-    public function register(): void
+    public function register(): Response
     {
         try {
             $request = $this->request->getJson();
@@ -106,13 +115,15 @@ class MinistryMembersController extends Controller
             );
             $this->response->setStatusCode(200);
             $this->response->sendJson(["data" => "Member registered successfully!"]);
+            return $this->response;
         } catch (Exception $ex) {
             $this->response->setStatusCode(500);
             $this->response->sendJson(["error" => $ex->getMessage()]);
+            return $this->response;
         }
     }
 
-    public function update(): void
+    public function update(): Response
     {
         try {
             $request = $this->request->getJson();
@@ -126,13 +137,15 @@ class MinistryMembersController extends Controller
             );
             $this->response->setStatusCode(200);
             $this->response->sendJson(["data" => "Member updated successfully!"]);
+            return $this->response;
         } catch (Exception $ex) {
             $this->response->setStatusCode(500);
             $this->response->sendJson(["error" => $ex->getMessage()]);
+            return $this->response;
         }
     }
 
-    public function delete(): void
+    public function delete(): Response
     {
         try {
             $request = $this->request->getJson();
@@ -146,9 +159,11 @@ class MinistryMembersController extends Controller
             );
             $this->response->setStatusCode(200);
             $this->response->sendJson(["data" => "Member deleted successfully!"]);
+            return $this->response;
         } catch (Exception $ex) {
             $this->response->setStatusCode(500);
             $this->response->sendJson(["error" => $ex->getMessage()]);
+            return $this->response;
         }
     }
 }

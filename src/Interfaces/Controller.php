@@ -9,11 +9,8 @@ use Jacksonsr45\RadiantPHP\Http\Response;
 
 abstract class Controller extends Controllers
 {
-    protected $service;
-
     public function __construct(Request $request, Response $response, Service $service)
     {
         parent::__construct($request, $response);
-        $this->service = $service;
     }
 }
