@@ -1,5 +1,15 @@
 <?php
 
-use Jacksonsr45\RadiantPHP\Http\Router;
+use Jacksonsr45\RadiantPHP\Http\Message\Response;
+use Jacksonsr45\RadiantPHP\Http\Route;
 
-$router = new Router();
+// class HomeController
+// {
+//     public function index(): Response
+//     {
+//         $response = new Response();
+//         return $response->setStatusCode(200)->write('Hello World!');
+//     }
+// }
+
+// Route::get('/', [HomeController::class, 'index']);
