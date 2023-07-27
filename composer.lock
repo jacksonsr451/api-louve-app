@@ -75,12 +75,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jacksonsr451/radiante-php.git",
-                "reference": "8837aaa3c69e4e8bb1d88edd3fc79d5a9b8bee85"
+                "reference": "2d104c6608de07e6bade5609b7b70059280ecd2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jacksonsr451/radiante-php/zipball/8837aaa3c69e4e8bb1d88edd3fc79d5a9b8bee85",
-                "reference": "8837aaa3c69e4e8bb1d88edd3fc79d5a9b8bee85",
+                "url": "https://api.github.com/repos/jacksonsr451/radiante-php/zipball/2d104c6608de07e6bade5609b7b70059280ecd2d",
+                "reference": "2d104c6608de07e6bade5609b7b70059280ecd2d",
                 "shasum": ""
             },
             "require": {
@@ -111,7 +111,7 @@
                 "issues": "https://github.com/jacksonsr451/radiante-php/issues",
                 "source": "https://github.com/jacksonsr451/radiante-php/tree/master"
             },
-            "time": "2023-07-27T19:03:10+00:00"
+            "time": "2023-07-27T20:36:57+00:00"
         },
         {
             "name": "phpoption/phpoption",
